@@ -4,7 +4,7 @@ import { AirConditionCheck } from './AirConditionCheck'; // 대기질구분
 import { GetAccidentData } from './GetAccidentData'; // 사고 데이터 api
 import { GetAirData } from './GetAirData'; // 미세먼지 데이터 api
 import { Mapstyle } from './Mapstyle'; //구글 맵 스타일(컬러)
-import { MediaQueryContext } from '../Context/MediaQueryContext';
+import { MediaQueryContext } from '../context/MediaQueryContext';
 import googleMapsApiLoader from 'google-maps-api-loader';
 import GMap from './GMap';
 import LocationSelector from './LocationSelect';
