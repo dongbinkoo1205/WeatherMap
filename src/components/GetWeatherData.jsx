@@ -40,10 +40,6 @@ const GetWeatherData = ({ isToggled }) => {
                 }
 
                 const WeatherData = await response.json();
-<<<<<<< HEAD
-                console.log(WeatherData);
-=======
->>>>>>> 6dc7ce0 (Fix: Update : userLocation)
 
                 const formattedData = WeatherData.response.body.items.item.map((item) => ({
                     baseDate: item.baseDate,
