@@ -2,8 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     background-color: #181805a6;
-    padding: 5px 15px;
+    padding: 9px 15px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: fixed;
@@ -12,7 +13,20 @@
     transform: translate(-50%, -50%);
     z-index: 100;
 }
+.navContainer > p {
+    width: 100%;
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+}
+.navWrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
 .navWeb {
+    margin: 10px 20px;
 }
 .navItem {
     display: flex;
@@ -20,14 +34,11 @@
     align-items: center;
     flex-direction: column;
     width: 50px;
-    height: 50px;
     border-radius: 50%;
-    /* background-color: #444; */
     color: #fff;
     font-size: 20px;
     transition: all 0.3s ease;
     cursor: pointer;
-    margin: 10px 20px;
 }
 .navWeb .navItem > p {
     font-size: 13px;

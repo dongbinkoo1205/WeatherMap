@@ -209,7 +209,7 @@
         transform: translate(-50%, 0%);
         width: calc(100% - 30px);
         height: 95%;
-        border-radius: 40px;
+        border-radius: 20px;
         overflow-x: hidden;
     }
     .WeatherData select {

@@ -95,7 +95,7 @@
     .AirInformation {
         width: calc(100% - 30px);
         position: absolute;
-        bottom: 135px;
+        bottom: 190px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 10;
