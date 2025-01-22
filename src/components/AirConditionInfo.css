@@ -1,0 +1,109 @@
+.traffic-info {
+    width: 380px;
+    background-color: rgba(40, 48, 59, 0.95); /* 반투명 배경 */
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 14px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.header span {
+    font-size: 14px;
+    letter-spacing: 0.8px;
+}
+
+.status {
+    display: flex;
+    margin-bottom: 10px;
+}
+.statusWrap {
+    display: flex;
+    align-items: center;
+}
+.status-item {
+    font-size: 13px;
+    margin: 0 15px;
+    gap: 8px;
+    cursor: pointer;
+}
+.status-item:first-child {
+    margin: 0 15px 0 0;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.green {
+    background-color: #4caf50; /* 원활: 초록 */
+}
+
+.yellow {
+    background-color: #ffc107; /* 서행: 노랑 */
+}
+
+.red {
+    background-color: #f44336; /* 정체: 빨강 */
+}
+.orange {
+    background-color: #ff5e00; /* 정체: 빨강 */
+}
+.gray {
+    background-color: #9e9e9e; /* 정보없음: 회색 */
+}
+
+.trafficFooter {
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.8;
+    margin: 5px 0;
+}
+
+/* 정보 팝업 */
+.info-popup {
+    margin-top: 20px;
+    background-color: #2e3844;
+    color: white;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: -110px;
+    left: 0;
+}
+
+.info-popup h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #4caf50; /* 강조 색상 */
+}
+@media (max-width: 1200px) {
+    .traffic-info {
+        width: calc(100% - 30px);
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 120px;
+        padding: 15px 20px;
+    }
+    .trafficFooter {
+        font-size: 11px;
+    }
+}
