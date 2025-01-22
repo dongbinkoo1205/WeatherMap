@@ -102,7 +102,11 @@ const AccidentMap = () => {
         if (map) {
             const location = new google.maps.LatLng(lat, lng);
             map.panTo(location);
+<<<<<<< HEAD
             map.setZoom(14);
+=======
+            map.setZoom(16);
+>>>>>>> 6dc7ce0 (Fix: Update : userLocation)
         }
     };
 

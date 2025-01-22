@@ -13,8 +13,15 @@ export const GetAirData = async () => {
             throw new Error(`AirAPI 요청 오류: ${response.status}`);
         }
         const AirData = await response.json();
+<<<<<<< HEAD
         return AirData.response.body.items.map((item) => {
             const region = AirRegion.find((region) => region.name === item.districtName);
+=======
+
+        return AirData.response.body.items.map((item) => {
+            const region = AirRegion.find((region) => region.name === item.districtName);
+
+>>>>>>> 6dc7ce0 (Fix: Update : userLocation)
             return {
                 dataDate: item.dataDate,
                 issueTime: item.issueTime,
