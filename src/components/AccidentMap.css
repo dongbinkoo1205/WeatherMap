@@ -1,0 +1,128 @@
+.situationWrap {
+    width: 100dvw;
+    height: 100dvh; /* 부모 요소의 높이 설정 */
+    display: flex;
+    background: #fffff1;
+    position: relative; /* Sticky 작동을 위해 relative 설정 */
+    overflow: hidden; /* 필요시 조정 가능 */
+    flex-wrap: wrap;
+}
+
+/* Sticky 적용된 메인 컨텐츠 */
+.mainContent {
+    width: 70%; /* 메인 콘텐츠 너비 */
+    height: 100vh; /* Sticky가 작동할 높이 */
+    position: sticky; /* Sticky 설정 */
+    top: 0; /* 화면 상단에 고정 */
+    z-index: 10; /* 다른 요소 위로 표시 */
+    background: #ffffff; /* 테스트용 배경색 */
+    display: flex;
+    flex-direction: column;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.mapSearch {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+}
+
+.mapCont {
+    display: flex;
+}
+.subContent {
+    width: 30%; /* 메인 콘텐츠 너비 */
+    height: 100vh;
+    overflow: scroll;
+    padding: 15px;
+}
+
+.custom-infowindow {
+    background: white; /* 다크 배경 */
+    border: 1px solid black;
+    color: #000000; /* 흰색 텍스트 */
+    padding: 25px 20px;
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    max-width: 250px; /* 최대 너비 설정 */
+}
+.gm-style .gm-style-iw-c {
+    padding: 0 !important;
+    background-color: rgba(30, 40, 50, 0.9);
+}
+.gm-style-iw-d {
+    overflow: auto !important;
+}
+
+.custom-infowindow > h3 {
+    font-weight: bold; /* 굵은 텍스트 */
+    margin-bottom: 10px; /* 아래 여백 */
+    font-size: 15px;
+}
+
+.custom-infowindow .content {
+    font-size: 14px; /* 작은 폰트 크기 */
+    line-height: 1.5; /* 행 간격 */
+}
+.gm-style-iw-chr {
+    position: absolute !important;
+    top: 0px !important;
+    right: 0 !important;
+    z-index: 10 !important;
+}
+.gm-ui-hover-effect {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+.gm-ui-hover-effect > span {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.custom-infowindow .close-btn {
+    position: absolute; /* 절대 위치 */
+    top: 8px; /* 상단 여백 */
+    right: 8px; /* 오른쪽 여백 */
+    background: none; /* 배경 없음 */
+    border: none; /* 테두리 없음 */
+    color: #ffffff; /* 흰색 텍스트 */
+    cursor: pointer; /* 클릭 가능 */
+}
+
+@media (max-width: 1200px) {
+    #map {
+    }
+    .mainContent {
+        position: static;
+    }
+    .situationWrap {
+        flex-direction: column;
+    }
+    .mainContent {
+        width: 100%;
+    }
+    .subContent {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        padding: 10px 50px;
+    }
+
+    .mapSearch {
+        width: 60%;
+        left: 50%;
+        top: 15px;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,81 @@
+.regionInput {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(30, 40, 50, 0.9); /* 슬라이드 배경 */
+    backdrop-filter: blur(5px);
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-left: 10px;
+}
+.regionInput .regionInputText {
+    font-size: 16px;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    color: white;
+    position: relative;
+}
+.regionInput .regionLabel {
+    position: relative;
+}
+.regionInput input {
+    width: clamp(250px, 5vw, 300px);
+    height: 40px;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    border: 1px solid white;
+    padding-left: 10px;
+    border-radius: 9999px;
+    background-color: rgba(30, 40, 50, 0.9);
+    color: white;
+}
+.regionInput button {
+}
+.regionInput button.btnClear {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 13px;
+    z-index: 10;
+    background-color: transparent;
+}
+.regionInput button img {
+    width: 100%;
+    height: 100%;
+}
+
+.regionInput button.btnSearch {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .regionInput {
+        background-color: transparent;
+        padding: 0;
+        margin-left: 0;
+        backdrop-filter: none;
+        width: 100%;
+        align-items: center;
+    }
+    .regionInput .regionInputText {
+        display: none;
+    }
+    .regionInput .regionLabel {
+        width: 100%;
+    }
+    .regionInput input {
+        width: 100%;
+        height: 45px;
+        background-image: url('../../public/search.png');
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: left;
+        background-position-x: 13px;
+        color: #fff;
+        border-width: 0px;
+        margin-left: 8px;
+        padding-left: 40px;
+        padding-right: 5px;
+    }
+}
