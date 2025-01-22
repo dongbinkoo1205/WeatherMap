@@ -6,7 +6,7 @@ export const GetAccidentDeath = async () => {
     const AccidentDeathKey = import.meta.env.VITE_ACCIDENT_DEATH_KEY;
 
     try {
-        const url = `http://apis.data.go.kr/B552061/AccidentDeath/getRestTrafficAccidentDeath?ServiceKey=${AccidentDeathKey}&searchYear=2024&siDo=1100&guGun=&type=json&numOfRows=10&pageNo=1`;
+        const url = `https://apis.data.go.kr/B552061/AccidentDeath/getRestTrafficAccidentDeath?ServiceKey=${AccidentDeathKey}&searchYear=2024&siDo=1100&guGun=&type=json&numOfRows=10&pageNo=1`;
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`API 요청 오류: ${response.status}`);

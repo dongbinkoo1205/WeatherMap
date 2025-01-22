@@ -5,7 +5,7 @@ export const GetAirData = async () => {
     const AirDataApi = import.meta.env.VITE_AIR_DATA_API;
     const { year } = GetDate();
 
-    const url = `http://apis.data.go.kr/B552584/UlfptcaAlarmInqireSvc/getUlfptcaAlarmInfo?ServiceKey=${AirDataApi}&returnType=json&year=${year}`;
+    const url = `https://apis.data.go.kr/B552584/UlfptcaAlarmInqireSvc/getUlfptcaAlarmInfo?ServiceKey=${AirDataApi}&returnType=json&year=${year}`;
 
     try {
         const response = await fetch(url);

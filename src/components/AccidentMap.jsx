@@ -69,11 +69,6 @@ const AccidentMap = () => {
                 const locationsData = await GetAccidentData();
                 setLocations(locationsData);
 
-                // locationsData.forEach((item) => {
-                //     console.log(item[5]); // 배열의 6번째 값(인덱스 5)을 출력
-                // });
-
-                // console.log(locationsData);
                 // 지도 초기화
                 const mapInstance = GMap.initMap(google, locationsData, Mapstyle);
                 setMap(mapInstance);

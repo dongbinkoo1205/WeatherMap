@@ -31,7 +31,7 @@ const GetWeatherData = ({ isToggled }) => {
             const { nx, ny } = selectedRegionData;
 
             // 날씨 데이터 요청 API
-            const url = `http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?ServiceKey=${WeatherDataApi}&pageNo=1&numOfRows=10&dataType=JSON&base_date=${base_date}&base_time=${base_time}&nx=${nx}&ny=${ny}`;
+            const url = `https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst?ServiceKey=${WeatherDataApi}&pageNo=1&numOfRows=10&dataType=JSON&base_date=${base_date}&base_time=${base_time}&nx=${nx}&ny=${ny}`;
 
             try {
                 const response = await fetch(url);

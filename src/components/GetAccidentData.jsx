@@ -2,7 +2,7 @@ export const GetAccidentData = async () => {
     const AccidentDataKey = import.meta.env.VITE_ACCIDENT_DATA_KEY;
 
     try {
-        const url = `http://apis.data.go.kr/B552468/acdntFreqocZone/getAcdntFreqocZone?ServiceKey=${AccidentDataKey}&pageNo=1&numOfRows=100&dataType=json&signguCode=11`;
+        const url = `https://apis.data.go.kr/B552468/acdntFreqocZone/getAcdntFreqocZone?ServiceKey=${AccidentDataKey}&pageNo=1&numOfRows=100&dataType=json&signguCode=11`;
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error(`API 요청 오류: ${response.status}`);
