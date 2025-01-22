@@ -117,13 +117,13 @@ const AccidentMap = () => {
             </div>
             {isMobile ? (
                 <>
-                    <GetWeatherData isToggled={isToggled.weatherData} />
+                    <GetWeatherData isToggled={isToggled.weatherData} setIsToggled={setIsToggled} />
                     <AirContent isToggled={isToggled.airAlert} />
                 </>
             ) : (
                 <>
                     <div className="subContent">
-                        <GetWeatherData isToggled={isToggled.weatherData} />
+                        <GetWeatherData isToggled={isToggled.weatherData} setIsToggled={setIsToggled} />
                         <AirContent isToggled={isToggled.airAlert} />
                     </div>
                 </>

@@ -3,7 +3,7 @@
 }
 .user-location-button {
     margin: 10px;
-    background-color: rgba(255, 242, 195, 0.9);
+    background-color: #0010f3f4;
     border-radius: 9999px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     bottom: 100px !important;
@@ -20,26 +20,28 @@
 
 .user-location-button::before {
     content: '현재 위치 확인하기';
+    color: white;
     position: absolute;
-    top: -45px;
+    top: -40px;
     right: 24px;
     padding: 10px 12px;
     font-size: 13px;
     white-space: nowrap;
-    background-color: rgba(255, 242, 195, 0.9);
+    background-color: #0012f3e6;
     border-radius: 28px;
     transition: 0.5s;
+    z-index: 1;
 }
 .user-location-button::after {
     content: '';
-    border-top: 12px solid rgba(255, 242, 195, 0.9);
+    border-top: 12px solid #0012f3e6;
     border-left: 20px solid transparent;
     position: absolute;
     top: -11px;
     right: 33px;
 }
 .user-location-button button {
-    background: url(../../public//location.png);
+    background: url(../../public//Whitelocation.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 35px;
@@ -49,4 +51,9 @@
     border-radius: 4px; */
     cursor: pointer;
     /* font-size: 14px; */
+}
+@media (max-width: 1200px) {
+    .user-location-button {
+        bottom: 200px !important;
+    }
 }

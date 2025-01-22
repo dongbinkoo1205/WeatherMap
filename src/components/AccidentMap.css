@@ -44,13 +44,16 @@
 }
 
 .custom-infowindow {
-    background: white; /* 다크 배경 */
-    border: 1px solid black;
+    background: #fffdf1;
+    border: 1px solid rgb(255, 255, 255);
     color: #000000; /* 흰색 텍스트 */
     padding: 25px 20px;
     border-radius: 8px; /* 둥근 모서리 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.2); /* 그림자 효과 */
     max-width: 250px; /* 최대 너비 설정 */
+}
+.gm-style .gm-style-iw-tc::after {
+    background: #fffdf1;
 }
 .gm-style .gm-style-iw-c {
     padding: 0 !important;

@@ -72,10 +72,14 @@
         background-repeat: no-repeat;
         background-position: left;
         background-position-x: 13px;
-        color: #fff;
+        color: #ffffff;
         border-width: 0px;
         margin-left: 8px;
         padding-left: 40px;
         padding-right: 5px;
+        background-color: #181805a6;
+    }
+    .regionInput input:focus {
+        background-color: #181805;
     }
 }

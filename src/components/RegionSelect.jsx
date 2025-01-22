@@ -1,10 +1,14 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useContext } from 'react';
 import { region } from '../category/region'; // 지역 데이터 가져오기
 import closeBtn from '../../public/close.png';
+import Blackclose from '../../public/Blackclose.png';
+import { MediaQueryContext } from '../context/MediaQueryContext';
 
 import './RegionSelect.css';
 
 const RegionSearch = ({ moveToLocation }) => {
+    const { isMobile } = useContext(MediaQueryContext);
+
     const searchRef = useRef();
     const searchClearRef = useRef();
     const [regionInput, setRegionInput] = useState('');
@@ -48,7 +52,7 @@ const RegionSearch = ({ moveToLocation }) => {
                         value={regionInput}
                         onChange={handleInputChange}
                         onKeyDown={handleKeyDown}
-                        placeholder="지역검색 예시 : 종로, 양천, 강서 등"
+                        placeholder=" 종로, 양천 등"
                     />
                     <button
                         className="btnClear"
@@ -56,7 +60,7 @@ const RegionSearch = ({ moveToLocation }) => {
                         onClick={handleClear}
                         style={{ display: regionInput ? 'block' : 'none' }}
                     >
-                        <img src={closeBtn} alt="" />
+                        {isMobile ? <img src={closeBtn} alt="" /> : <img src={closeBtn} alt="" />}
                     </button>
                 </label>
                 <button className="btnSearch" disabled onClick={handleSearch}>

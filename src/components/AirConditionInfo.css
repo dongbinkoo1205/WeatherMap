@@ -100,7 +100,7 @@
         width: calc(100% - 30px);
         left: 50%;
         transform: translateX(-50%);
-        bottom: 120px;
+        bottom: 135px;
         padding: 15px 20px;
     }
     .trafficFooter {

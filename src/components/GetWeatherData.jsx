@@ -3,16 +3,16 @@ import { regionName } from '../category/regionName';
 import { GetDate } from './GetDate';
 import { weatherCategory, categorySymbols } from '../category/weatherCategory';
 import { WeatherImage } from '../category/WeatherImage';
+import close from '../../public/close.png';
+
 import './GetWeatherData.css';
 
-const GetWeatherData = ({ isToggled }) => {
-    const toggledStyle = isToggled
-        ? {
-              display: 'block',
-          }
-        : {
-              display: 'none',
-          };
+const GetWeatherData = ({ isToggled, setIsToggled }) => {
+    const toggledStyle = isToggled ? { display: 'block' } : { display: 'none' };
+
+    const handleToggle = () => {
+        setIsToggled((prev) => !prev); // 부모 상태 변경 요청
+    };
     const [selectedRegion, setSelectedRegion] = useState('서울'); // 초기값은 "서울"
     const [weatherData, setWeatherData] = useState([]);
     const [matchingData, setMatchingData] = useState(null); // 조건에 맞는 데이터 상태
@@ -108,6 +108,9 @@ const GetWeatherData = ({ isToggled }) => {
 
     return (
         <div className={`WeatherData_${weatherClass} WeatherData`} style={toggledStyle}>
+            <div onClick={handleToggle} className="BtnClose">
+                <img src={close} alt="" />
+            </div>
             {matchingData ? (
                 <div className="WeatherImage">
                     <h1 className="TopRegion">{selectedRegion}의 날씨</h1>
