@@ -63,6 +63,9 @@
     }
     .regionInput .regionLabel {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .regionInput input {
         width: 100%;
@@ -78,6 +81,7 @@
         padding-left: 40px;
         padding-right: 5px;
         background-color: #181805a6;
+        font-size: 16px;
     }
     .regionInput input:focus {
         background-color: #181805;
