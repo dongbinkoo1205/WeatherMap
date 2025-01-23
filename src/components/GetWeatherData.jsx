@@ -120,7 +120,7 @@ const GetWeatherData = ({ isToggled, setIsToggled }) => {
                     <img src={weatherImage} alt={matchingData.category} />
                 </div>
             ) : (
-                <p>조건에 맞는 데이터가 없습니다.</p>
+                <p>일일 API 호출 횟수를 초과했습니다. 죄송합니다</p>
             )}
 
             <ul className="MainTemperature">
