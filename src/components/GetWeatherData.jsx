@@ -1,13 +1,16 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { regionName } from '../category/regionName';
 import { GetDate } from './GetDate';
 import { weatherCategory, categorySymbols } from '../category/weatherCategory';
 import { WeatherImage } from '../category/WeatherImage';
+import { MediaQueryContext } from '../context/MediaQueryContext';
 import close from '../../public/close.png';
 
 import './GetWeatherData.css';
 
 const GetWeatherData = ({ isToggled, setIsToggled }) => {
+    const { isMobile } = useContext(MediaQueryContext);
+
     const toggledStyle = isToggled ? { display: 'block' } : { display: 'none' };
 
     const handleToggle = () => {
@@ -108,9 +111,12 @@ const GetWeatherData = ({ isToggled, setIsToggled }) => {
 
     return (
         <div className={`WeatherData_${weatherClass} WeatherData`} style={toggledStyle}>
-            <div onClick={handleToggle} className="BtnClose">
-                <img src={close} alt="" />
-            </div>
+            {isMobile ? (
+                <div onClick={handleToggle} className="BtnClose">
+                    <img src={close} alt="" />
+                </div>
+            ) : null}
+
             {matchingData ? (
                 <div className="WeatherImage">
                     <h1 className="TopRegion">{selectedRegion}의 날씨</h1>
