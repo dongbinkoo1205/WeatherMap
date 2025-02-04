@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { GetAirData } from './GetAirData';
 import { useSwiperContext } from '../context/SwiperContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { GetDate } from './GetDate';
 
 import 'swiper/css'; // Swiper 기본 스타일
