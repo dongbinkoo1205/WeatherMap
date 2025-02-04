@@ -2,12 +2,11 @@ import { useEffect, useState } from 'react';
 import { GetAirData } from './GetAirData';
 import { useSwiperContext } from '../context/SwiperContext';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { GetDate } from './GetDate';
 
 import 'swiper/css'; // Swiper 기본 스타일
 import 'swiper/css/navigation'; // 네비게이션 모듈 스타일
-import 'swiper/css/autoplay'; // Autoplay 모듈 스타일
 
 import './AirContent.css';
 
